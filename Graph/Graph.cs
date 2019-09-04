@@ -100,5 +100,33 @@ namespace Graph
 
 			return result;
 		}
+
+		/// <summary>
+		/// Проверяет наличие пути между дву вершинами
+		/// </summary>
+		/// <param name="start"></param>
+		/// <param name="finish"></param>
+		/// <returns></returns>
+		public bool IsExistsWay(Vertex start, Vertex finish)
+		{
+			var list = new List<Vertex>() {
+				start
+			};
+
+			for (int i = 0; i < list.Count; i++)
+			{
+				var vertex = list[i];
+
+				foreach (var v in GetLinkedVertex(vertex))
+				{
+					if (!list.Contains(v))
+					{
+						list.Add(v);
+					}
+				}
+			}
+
+			return list.Contains(finish);
+		}
 	}
 }

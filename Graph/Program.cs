@@ -53,6 +53,12 @@ namespace Graph
 			ShowLinkedVertex(graph, v6);
 			ShowLinkedVertex(graph, v7);
 
+			Console.WriteLine();
+			Console.WriteLine();
+
+			Console.WriteLine($"Определение пути между вершинами {v1} и {v5} дало следующий результат {graph.IsExistsWay(v1, v5)}");
+			Console.WriteLine($"Определение пути между вершинами {v2} и {v4} дало следующий результат {graph.IsExistsWay(v2, v4)}");
+
 			// Ожидаем ввод для завершения программы
 			Console.ReadLine();
 		}
