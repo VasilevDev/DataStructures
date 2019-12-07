@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LinkedList.Model;
+using System;
 
 namespace LinkedList
 {
@@ -6,7 +7,15 @@ namespace LinkedList
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
+			var list = new LinkedList<int>();
+
+			list.Add(1);
+			list.Add(2);
+			list.Add(3);
+
+			list.Remove(2);
+
+			Console.ReadLine();
 		}
 	}
 }
